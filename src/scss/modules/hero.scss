@@ -1,0 +1,60 @@
+.hero {
+    padding: 74px 16px 88px;
+
+    &__contact {
+        display: inline-block;
+        padding: 4px 24px;
+        border-radius: 64px;
+        color: #fff;
+        background: $lightBlue;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    &__header {
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+        color: $darkText;
+    }
+
+    &__hello {
+        display: none;
+    }
+
+    &__image {
+        box-sizing: content-box;
+        height: 96px;
+        width: 96px;
+        border: 16px solid #F6F9FD;
+        border-radius: 50%;
+    }
+
+    &__image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link {
+        font-weight: bold;
+        color: $lightBlue;
+        text-decoration: none;
+    }
+
+    &__paragraph {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: center;
+        color: $text;
+        margin-bottom: 48px;
+    }
+
+    &__special {
+        color: $blue;
+    }
+
+}
