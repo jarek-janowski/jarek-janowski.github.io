@@ -6,6 +6,16 @@
         margin: 0 auto;
     }
 
+    @media(min-width: $desktop) {
+        max-width: 100%;
+    }
+
+    &__bubble {
+        position: absolute;
+        left: calc(50% + 90px);
+        top: -26px;
+    }
+
     &__contact {
         display: inline-block;
         padding: 4px 24px;
@@ -20,6 +30,32 @@
 
     &__description {
         text-align: center;
+
+        @media(min-width: $desktop) {
+            max-width: 786px;
+            margin: 0 auto;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                height: 255px;
+                width: 83px;
+                position: absolute;
+                display: block;
+                top: 0;
+            }
+
+            &::before {
+                background: url('../assets/img/left-bracket.svg');
+                right: 100%;
+            }
+
+            &::after {
+                background: url('../assets/img/right-bracket.svg');
+                left: 100%;
+            }
+        }
     }
 
     &__header {
@@ -27,10 +63,39 @@
         line-height: 32px;
         text-align: center;
         color: $darkText;
+
+        @media(min-width: $desktop) {
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
 
     &__hello {
         display: none;
+
+
+        @media(min-width: $desktop) {
+            display: block;
+            position: relative;
+            background: $blue;
+            color: #fff;
+            border-radius: 16px;
+            padding: 16px 19px;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 40px;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 32px;
+                width: 17px;
+                height: 23px;
+                background: url('../assets/img/Speech-cloud.svg');
+            }
+        }
     }
 
     &__image {
@@ -39,12 +104,19 @@
         width: 96px;
         border: 16px solid #F6F9FD;
         border-radius: 50%;
+
+        @media(min-width: $desktop) {
+            height: 178px;
+            width: 178px;
+            border: 24px solid #F6F9FD;
+        }
     }
 
     &__image-container {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     &__link {
@@ -60,10 +132,16 @@
         text-align: center;
         color: $text;
         margin-bottom: 48px;
+
+        @media(min-width: $desktop) {
+            font-size: 18px;
+            line-height: 40px;
+        }
     }
 
     &__special {
         color: $blue;
+        white-space: nowrap;
     }
 
 }
