@@ -2,19 +2,19 @@ import '../scss/main.scss';
 
 console.log("Hi, I'm Jarek - nice to meet you 👋")
 
-fetch('https://api.github.com/users/jarek-janowski/repos?sort=created&direction=asc')
-    .then((res) => res.json())
-    .then((res) => {
-        const container = document.querySelector('.projects-grid--js');
-        for (let repo of res) {
-            const {
-                description,
-                homepage,
-                html_url,
-                name
-            } = repo;
+fetch('https://api.github.com/users/jarek-janowski/repos?sort=created&direction=desc')
+  .then((res) => res.json())
+  .then((res) => {
+    const container = document.querySelector('.projects-grid--js');
+    for (let repo of res) {
+      const {
+        description,
+        homepage,
+        html_url,
+        name
+      } = repo;
 
-            const template = `<article class="project">
+      const template = `<article class="project">
             <div class="project__window">
               <span class="project__circle"></span>
               <span class="project__circle"></span>
@@ -43,9 +43,9 @@ fetch('https://api.github.com/users/jarek-janowski/repos?sort=created&direction=
               </p>
             </div>
           </article>`
-            if (description) {
-                container.innerHTML += template;
-            }
-        }
-    })
-    .catch((e) => console.log(e));
+      if (description) {
+        container.innerHTML += template;
+      }
+    }
+  })
+  .catch((e) => console.log(e));
