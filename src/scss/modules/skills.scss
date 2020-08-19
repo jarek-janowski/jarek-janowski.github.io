@@ -34,10 +34,10 @@
     font-size: 16px;
     line-height: 24px;
     padding-left: 16px;
-    list-style-image: url('/src/assets/img/small-tick-green.svg');
+    list-style-image: url("../assets/img/small-tick-green.svg");
 
     &--blue {
-        list-style-image: url('/src/assets/img/small-tick-blue.svg');
+        list-style-image: url("../assets/img/small-tick-blue.svg");
     }
 
     &--dot {
